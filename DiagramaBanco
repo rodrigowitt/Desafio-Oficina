@@ -1,0 +1,68 @@
++---------------+
+|      Cliente      |
++---------------+
+| id_cliente (PK) |
+| nome             |
+| telefone         |
+| endereço         |
++---------------+
+
++---------------+
+|      Veículo      |
++---------------+
+| id_veículo (PK) |
+| placa            |
+| marca            |
+| modelo           |
+| ano              |
+| id_cliente (FK) |
++---------------+
+
++---------------+
+|      Mecânico      |
++---------------+
+| id_mecânico (PK) |
+| código           |
+| nome             |
+| endereço         |
+| especialidade    |
++---------------+
+
++---------------+
+|      Ordem de Serviço (OS)      |
++---------------+
+| id_os (PK)        |
+| n°                |
+| data_de_emissão  |
+| valor             |
+| status            |
+| data_de_conclusão |
+| id_veículo (FK)  |
+| id_mecânico (FK) |
++---------------+
+
++---------------+
+|      Serviço      |
++---------------+
+| id_serviço (PK) |
+| descrição       |
+| valor           |
+| id_os (FK)     |
++---------------+
+
++---------------+
+|      Peça      |
++---------------+
+| id_peça (PK)  |
+| descrição      |
+| valor          |
+| id_os (FK)    |
++---------------+
+
++---------------+
+| Tabela de Referência de Mão-de-Obra |
++---------------+
+| id_tabela (PK) |
+| descrição       |
+| valor           |
++---------------+
